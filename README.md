@@ -31,7 +31,10 @@ When you press the extension button (on the top right), a window pops up display
     - `tabs` lets us access the browser's tab system, so we can read the current tab.
 - `host_permissions` specify which domains the extension is allowed to interact with.
 - `background` specify the background script or service worker that runs in the background.
+    - `service_worker` `.js` file that runs seperately from the main browser thread. The service worker has access to content from a webpage since it is seperate from main processes. 
+        - Has capabilites to speak with extensions with extensions messaging system.
 - `content_scripts` specifies scripts that are injected into web pages matching certain URLs.
+    - Files that run in context of the webpage we are on.
 - `web_accessible_resources` defines resources that can be accessed by web pages.
 - `action` defines the default popup and icons for the extension action.
 
