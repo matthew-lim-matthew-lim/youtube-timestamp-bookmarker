@@ -24,3 +24,14 @@ When you press the extension button (on the top right), a window pops up display
 ## `manifest.json`
 
 - Defines the extension's metadata, permissions, background scripts, content scripts, and other configurations.
+- Any chromium-based extension (chrome, firefox, safari, etc) will need a `manifest.json`
+- `permissions` defines the permissions that the extension is allowed.
+    - We use `storage` and `tabs` permissions, which use `chrome.storage` api and `chrome.tabs` api.
+    - `storage` allows us to store stuff in the user's browser.
+    - `tabs` lets us access the browser's tab system, so we can read the current tab.
+- `host_permissions` specify which domains the extension is allowed to interact with.
+- `background` specify the background script or service worker that runs in the background.
+- `content_scripts` specifies scripts that are injected into web pages matching certain URLs.
+- `web_accessible_resources` defines resources that can be accessed by web pages.
+- `action` defines the default popup and icons for the extension action.
+
