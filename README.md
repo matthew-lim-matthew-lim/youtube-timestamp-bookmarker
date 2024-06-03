@@ -35,6 +35,7 @@ When you press the extension button (on the top right), a window pops up display
         - Has capabilites to speak with extensions with extensions messaging system.
 - `content_scripts` specifies scripts that are injected into web pages matching certain URLs.
     - Files that run in context of the webpage we are on.
+    - Every time the url matches `"https://*.youtube.com/*"`, we run `"contentScript.js"`.
 - `web_accessible_resources` defines resources that can be accessed by web pages.
 - `action` defines the default popup and icons for the extension action.
 
